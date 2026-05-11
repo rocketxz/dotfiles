@@ -1,0 +1,16 @@
+# ~/.config/mako/config
+max-history=100
+sort=-time
+
+# Estética
+font=Google Sans Flex 12
+background-color=#282828e6
+text-color=#ebdbb2
+border-color=#458588
+border-size=2
+border-radius=8
+padding=15
+default-timeout=5000
+
+[urgency=high]
+border-color=#fb4934

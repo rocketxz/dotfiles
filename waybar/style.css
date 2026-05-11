@@ -1,0 +1,70 @@
+* {
+    border: none;
+    font-family: "Google Sans Flex", "Hack Nerd Font", sans-serif;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: rgba(40, 40, 40, 0.9);
+    color: #ffffff;
+    border-bottom: 2px solid #4c7899;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #ffffff;
+}
+
+#workspaces button.focused {
+    background: #4c7899;
+    border-bottom: 2px solid #ffffff;
+}
+
+#clock, #battery, #network, #bluetooth, #custom-power {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#battery.critical {
+    color: #ff5555;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#language {
+    background: #458588;
+    color: #ffffff;
+    padding: 0 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+#backlight {
+    color: #fabd2f; /* Un color amarillo/naranja para el sol */
+    padding: 0 10px;
+}
+
+#pulseaudio {
+    color: #83a598; /* Un azul suave tipo Gruvbox */
+    padding: 0 10px;
+}
+#pulseaudio.muted {
+    color: #fb4934; /* Rojo si está silenciado */
+}
+
+#custom-power {
+    color: #ff5555;
+    font-weight: bold;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ff5555;
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,60 @@
+# --- FUENTE ---
+font = "Hack Nerd Font"
+font-size = 20
+
+# --- COLORES (Catppuccin Macchiato) ---
+text-color = #cad3f5
+prompt-color = #ed8796
+selection-color = #24273a
+selection-background = #eed49f
+background-color = #24273acc
+
+placeholder-color = #8087a2
+
+# --- INPUT ---
+prompt-text = "  "
+placeholder-text = "Buscar..."
+
+input-background = #00000000
+
+# --- RESULTADOS ---
+num-results = 8
+result-spacing = 6
+
+default-result-color = #cad3f5
+
+selection-background-padding = 4
+selection-background-corner-radius = 6
+
+selection-match-color = #ed8796
+
+# --- CURSOR ---
+text-cursor = true
+text-cursor-style = bar
+text-cursor-color = #eed49f
+
+# --- VENTANA ---
+width = 40%
+height = 35%
+
+border-width = 2
+border-color = #eed49f
+
+outline-width = 0
+
+corner-radius = 12
+
+padding-top = 16
+padding-bottom = 16
+padding-left = 20
+padding-right = 20
+
+# --- POSICIÓN ---
+anchor = center
+
+# --- BEHAVIOR ---
+matching-algorithm = fuzzy
+auto-accept-single = false
+history = true
+
+ascii-input = true

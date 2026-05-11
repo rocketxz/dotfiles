@@ -1,0 +1,92 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight","sway/language","pulseaudio","network", "bluetooth","battery","custom/notification", "custom/power"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+
+  "backlight": {
+    "device": "intel_backlight", // O "amdgpu_bl0" según tu hardware
+    "format": "{percent}% {icon}",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set +1%",
+    "on-scroll-down": "brightnessctl set 1%-"
+},
+
+  "pulseaudio": {
+    "format": "{volume} {icon} ",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-icons": {
+        "headphone": " ",
+        "hands-free": "󰋐 ",
+        "headset": " ",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+},
+
+    "sway/language": {
+    "format": "  {}",
+    "tooltip": false
+},
+
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y}  ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}%  ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+},
+
+    "network": {
+        "format-wifi": "{essid}  ",
+        "format-ethernet": "Connected  ",
+        "format-disconnected": "Disconnected  ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "on-click": "kitty -e nmtui"
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "", 
+        "format-connected": " {device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "kitty -e bluetoothctl"
+    },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "󰵙 ",
+    "on-click": "makoctl dismiss -a", // Al hacer clic limpia todas las notificaciones
+    "on-click-right": "makoctl mode -a do-not-disturb" // Clic derecho para "No molestar"
+},
+ 
+    "custom/power": {
+        "format": "⏻",
+	"on-click": "swaynag -t warning -m 'Acciones de Energía' -B 'Apagar' 'shutdown now' -B 'Reiniciar' 'reboot' -B 'Cerrar Sesión' 'swaymsg exit'",
+        "tooltip": false
+    }
+}
