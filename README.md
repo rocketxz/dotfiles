@@ -1,6 +1,6 @@
 # dotfiles
 
-Configuración personal para entorno Wayland.
+Configuración personal para entorno Wayland (Sway-I3wm).
 
 ## Componentes
 
@@ -11,6 +11,7 @@ Configuración personal para entorno Wayland.
 | **Waybar** | Barra de estado |
 | **Mako** | Notificaciones |
 | **Tofi** | Launcher |
+| **Nvim** | editor |
 
 ## Atajos principales
 
@@ -18,7 +19,6 @@ Configuración personal para entorno Wayland.
 - `Super + m` → Menú (tofi)
 - `Super + n` → Thunar
 - `Super + b` → Firefox
-- `Super + o` → Edge
 - `Super + flechas` → Navegar ventanas
 - `Super + r` → Modo resize
 - `Print` → Captura pantalla
@@ -26,10 +26,11 @@ Configuración personal para entorno Wayland.
 
 ## Instalación
 
-Gestionado con `manifest.toml`. Los configs se linked a `~/.config/`.
+Gestionado con `maza-dotfiles`. Los configs se linked a `~/.config/`.
 
 ## Theme
 
 - Fondo: `#282828`
 - Acento: `#00bcff`
 - Terminal: Fira Code 16px, fondo 95% opacity
+- Fonts `Google Sans Flex`
